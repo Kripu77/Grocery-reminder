@@ -122,6 +122,11 @@ display: none;
     color: red;
     margin-right: 0.7rem;
 }
+
+.dlt-btn:hover, .clr-btn:hover{
+    color: rgb(134, 6, 6);
+    transition: 0.4s all ease-in-out
+}
 .clr-btn{
      
      
@@ -136,4 +141,8 @@ display: none;
     background-color: #f1f5f8;
     transition: all 0.6s ease-in-out;
 
+}
+
+.changing-heading{
+    min-height: 5rem;
 }

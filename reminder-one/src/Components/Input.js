@@ -9,7 +9,7 @@ const[list, setList] = useState([]);
 const[added, setAdded] = useState(false);
 
 const filterFn = (id)=>{
-       toast.error('Thank you the item has been successfully removed')
+       toast.error('Thank you the item removed')
     setList(list.filter((item)=>{
      
         return item.id!= id;
