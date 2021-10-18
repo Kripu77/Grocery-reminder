@@ -6,7 +6,7 @@ const Item = ({id, value, filterFn}) => {
     return (
         <div key={id} className='display-panel'>
       
-           <p className='list'>{value}</p>
+           <p className='list'>{value} </p>
            <div className='btn-container'>
            <button className='dlt-btn' onClick={()=>filterFn(id)}> <AiFillDelete/> </button>
            <button className='clr-btn'> <AiFillEdit/> </button>
