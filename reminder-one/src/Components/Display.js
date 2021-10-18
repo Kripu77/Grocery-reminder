@@ -6,10 +6,10 @@ const Display = ({list,setList, filterFn, editFn}) => {
     return (
        <section className='records-diplay'>
     {
-        list.map((listed)=>{
+        list.map((listed, index)=>{
          
 
-        return <Item {...listed} filterFn= {filterFn} editFn={editFn}/>
+        return <Item {...listed} filterFn= {filterFn} editFn={editFn} key={index}/>
   
         })
     }
