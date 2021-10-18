@@ -5,7 +5,11 @@ const Input = () => {
 const[value, setValue] = useState('')
 const[list, setList] = useState([]);
 
-
+const filterFn = (id)=>{
+    setList(list.filter((item)=>{
+        return item.id!= id;
+    }))
+}
 //prevents default
 const handleSubmit = (e)=>{
 e.preventDefault();
@@ -25,8 +29,8 @@ console.log(list)}
             </form>
 
         </section>
-        <section className='display-panel'>
-            <Display list={list} setList={setList}/>
+        <section>
+            <Display list={list} setList={setList} filterFn={filterFn}/>
            
 
         </section>
