@@ -44,7 +44,7 @@ height: auto;
      transition: 0.3s all ease-in-out;
 }
 .bar{
-    width: 25rem;
+    width: 25vw;
     background-color: #84ba64;
     height: 0.5rem;
   margin: 1rem auto;
@@ -57,8 +57,8 @@ height: auto;
     border: none;
     outline: none;
   
-    height: 2rem;
-   width: 12rem;
+    height: 4vh;
+   width: 12vw;
    margin-left: 1rem;
    letter-spacing: 0.1rem;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -71,14 +71,14 @@ height: auto;
     background-color: #62854e;
     color:white;
     transition: 0.5s all ease-in-out;
-  height: 2.2rem;
-  width: 13rem;
+  height: 4.2vh;
+  width: 13vw;
 }
 
 input{
     padding: 0.3rem;
-    width: 25rem;
-    height:2rem;
+    width: 25vw;
+    height:4vh;
     font-size: 1rem;
     font-family: cursive;
 }

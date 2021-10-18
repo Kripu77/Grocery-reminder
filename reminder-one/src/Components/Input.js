@@ -9,10 +9,18 @@ const[list, setList] = useState([]);
 const[added, setAdded] = useState(false);
 
 const filterFn = (id)=>{
-       toast.error('Thank you the item removed')
+       toast.error('Item removed')
     setList(list.filter((item)=>{
      
         return item.id!= id;
+    }))
+  
+}
+//to edit the entered value
+const editFn = (id)=>{
+  setValue(list.find((value,index)=>{
+      console.log(id)
+        return value.id===id;
     }))
 }
 
@@ -54,7 +62,7 @@ setValue('')}
 
         </section>
         <section>
-            <Display list={list} setList={setList} filterFn={filterFn}/>
+            <Display list={list} setList={setList} filterFn={filterFn} editFn={editFn}/>
            
 
         </section>
