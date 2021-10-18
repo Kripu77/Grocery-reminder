@@ -4,7 +4,7 @@ import Input from './Components/Input'
 import "./CSS/Style.css"
 const App = () => {
     return (
-        <div>
+        <div className='main-container'>
        <Header/>
        <Input/>
         </div>
