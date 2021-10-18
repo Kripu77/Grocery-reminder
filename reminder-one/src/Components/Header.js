@@ -6,7 +6,7 @@ const Header = () => {
     //text reffect side effect dealer
     useEffect(()=>{
 init(textRef.current,{ showCursor: false, backDelay:4000, backSpeed:80, strings:["Daily Reminder", "TO DO"]})
-    console.log(textRef)
+    
 }, [])
     return (
         <header>
