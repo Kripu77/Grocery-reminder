@@ -4,16 +4,15 @@ import Display from './Display';
   import 'react-toastify/dist/ReactToastify.css';
 
   //get items from local storage to remove the volatility
-
   const getLocalStorage = ()=>{
-      let list = localStorage.getItem('list')
+      let list = localStorage.getItem('list');
+      //truthy and falsy to check if there is something avaibale in the local storage to prevent
       if(list){
-          return JSON.parse(localStorage.getItem('list'))
-
+return JSON.parse(localStorage.getItem('list'))
       }
-      else return [];
-
+      else return []
   }
+
 const Input = () => {
 const[value, setValue] = useState('')
 const[list, setList] = useState(getLocalStorage());
@@ -23,7 +22,7 @@ const filterFn = (id)=>{
        toast.error('Item removed')
     setList(list.filter((item)=>{
      
-        return item.id!= id;
+        return item.id!== id;
     }))
   
 }
@@ -38,7 +37,7 @@ const editFn = (id)=>{
 
 
 
-if(added==true){
+if(added===true){
  toast.success('Item Added')
 }
 
@@ -67,9 +66,8 @@ setValue('')}
 //to add items in local storage
 
 useEffect(()=>{
-    localStorage.setItem('list', JSON.stringify(list))
+localStorage.setItem('list', JSON.stringify(list))
 },[list])
-
     return (
         <>
         <section className='form' onSubmit={handleSubmit}>
