@@ -1,5 +1,5 @@
 import React from 'react'
-import singleItem from './singleItem'
+import Item from './Item'
 
 const Display = ({list,setList}) => {
 
@@ -7,11 +7,10 @@ const Display = ({list,setList}) => {
        <section className='records-diplay'>
     {
         list.map((listed)=>{
-           const{id,value} = listed;
-           return(
-         <singleItem id={id} value={value}/>
-           )
-           
+         
+
+        return <Item {...listed}/>
+  
         })
     }
 
