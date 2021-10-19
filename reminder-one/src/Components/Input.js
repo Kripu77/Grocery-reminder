@@ -20,6 +20,7 @@ const getLocalStorage = ()=>{
 const Input = () => {
 const[value, setValue] = useState('')
 const[list, setList] = useState(getLocalStorage());
+const[prevList, setPrevList]=  useState([]);
 const[added, setAdded] = useState(false);
 const[editing, setEditing] = useState(false);
 const[editID, setEditId]=  useState(null)
@@ -47,6 +48,7 @@ const editFn = (id)=>{
 
 
 
+
 if(added===true){
  toast.success('Item Added')
 }
@@ -70,6 +72,21 @@ setAdded(true);
 
 // once excecution is complete clear the input feild
 setValue('')
+setEditing(false)
+
+
+}
+if(editing==true){
+    setList(list.map((item)=>{
+        if(item.id===editID){
+            return {...item, value}
+        }
+        return item
+
+    }))
+    setEditing(false)
+    setEditId(null)
+    setValue('')
 
 }
 }
