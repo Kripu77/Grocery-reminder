@@ -49,9 +49,7 @@ const editFn = (id)=>{
 
 
 
-if(added===true){
- toast.success('Item Added')
-}
+
 
 //useEffect to remove the toast
 
@@ -73,15 +71,22 @@ setAdded(true);
 // once excecution is complete clear the input feild
 setValue('')
 setEditing(false)
-
+if(added===true){
+ toast.success('Item Added')
+}
 
 }
 if(editing==true){
     setList(list.map((item)=>{
+        //edit id is coming fromn use state
         if(item.id===editID){
+            toast.success("value changed")
             return {...item, value}
+               
         }
+      
         return item
+       
 
     }))
     setEditing(false)
