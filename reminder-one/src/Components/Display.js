@@ -1,7 +1,7 @@
 import React from 'react'
 import Item from './Item'
 
-const Display = ({list,setList, filterFn, editFn}) => {
+const Display = ({list,setList, filterFn, editFn, editing, setEditing}) => {
 
     return (
        <section className='records-diplay'>
@@ -9,7 +9,7 @@ const Display = ({list,setList, filterFn, editFn}) => {
         list.map((listed, index)=>{
          
 
-        return <Item {...listed} filterFn= {filterFn} editFn={editFn} key={index}/>
+        return <Item {...listed} filterFn= {filterFn} editFn={editFn} key={index} editing={editing} setEditing={setEditing}/>
   
         })
     }

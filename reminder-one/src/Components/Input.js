@@ -21,7 +21,8 @@ const Input = () => {
 const[value, setValue] = useState('')
 const[list, setList] = useState(getLocalStorage());
 const[added, setAdded] = useState(false);
-const[editing, setEditing] = useState(false)
+const[editing, setEditing] = useState(false);
+const[editID, setEditId]=  useState(null)
 
 const filterFn = (id)=>{
        toast.error('Item removed')
@@ -38,6 +39,7 @@ const editFn = (id)=>{
     })
     console.log(editItem)
     setEditing(true)
+    setEditId(id)
     setValue(editItem.value)
 
 }
@@ -67,7 +69,9 @@ console.log(list)
 setAdded(true);
 
 // once excecution is complete clear the input feild
-setValue('')}
+setValue('')
+
+}
 }
 
 
@@ -90,7 +94,7 @@ useEffect(()=>{
 
         </section>
         <section>
-            <Display list={list} setList={setList} filterFn={filterFn} editFn={editFn}/>
+            <Display list={list} setList={setList} filterFn={filterFn} editFn={editFn} editing={editing} setEditing={setEditing}/>
            
 
         </section>
