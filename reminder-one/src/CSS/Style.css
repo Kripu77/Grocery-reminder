@@ -115,7 +115,9 @@ display: none;
     margin-right: 20rem;
 }
 .btn-container{
+    position: absolute;
     display: inline-block;
+    right:30vw;
     
    
 }
@@ -152,4 +154,37 @@ display: none;
 
 .changing-heading{
     min-height: 5rem;
+}
+
+@media all and (max-width:630px){
+    body{
+      font-size: 0.5rem;
+    }
+    .main-container{
+        width: 90vw;
+    }
+    .main-btn{
+        font-size: 0.5rem;
+       width: 20vw;
+        
+        border-radius: 10px;
+    }
+
+    .bar{
+        margin-top: -20px;
+        height: 0.2rem;
+    }
+    input{
+        width: 63vw;
+        font-size: 0.5rem;
+    }
+    .display-panel{
+      width: 73vw;
+        font-size: 1rem;
+    }
+
+    .dlt-btn, .clr-btn{
+        font-size: 1.2rem;
+        
+    }
 }
