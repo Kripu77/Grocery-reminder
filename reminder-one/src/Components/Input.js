@@ -20,7 +20,7 @@ const getLocalStorage = ()=>{
 const Input = () => {
 const[value, setValue] = useState('')
 const[list, setList] = useState(getLocalStorage());
-const[prevList, setPrevList]=  useState([]);
+
 const[added, setAdded] = useState(false);
 const[editing, setEditing] = useState(false);
 const[editID, setEditId]=  useState(null)
