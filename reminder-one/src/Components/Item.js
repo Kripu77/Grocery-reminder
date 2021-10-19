@@ -3,6 +3,7 @@ import { AiFillDelete} from "react-icons/ai";
 import { AiFillEdit} from "react-icons/ai";
 const Item = ({id, value, filterFn, editFn}) => {
        console.log(`the value is ${value}`)
+    //    main display panel
     return (
         <div key={id} className='display-panel'>
       

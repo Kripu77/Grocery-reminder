@@ -21,21 +21,25 @@ const Input = () => {
 const[value, setValue] = useState('')
 const[list, setList] = useState(getLocalStorage());
 const[added, setAdded] = useState(false);
+const[editing, setEditing] = useState(false)
 
 const filterFn = (id)=>{
        toast.error('Item removed')
-    setList(list.filter((item)=>{
-     
-        return item.id!== id;
-    }))
+    setList(list.filter((item)=>item.id!== id
+
+    ))
   
 }
 //to edit the entered value
 const editFn = (id)=>{
-  setValue(list.find((value,index)=>{
-      console.log(id)
+   
+        const editItem = list.find((value,index)=>{
         return value.id===id;
-    }))
+    })
+    console.log(editItem)
+    setEditing(true)
+    setValue(editItem.value)
+
 }
 
 
